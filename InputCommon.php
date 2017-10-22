@@ -64,12 +64,14 @@ class InputCommon extends InputCore{
         //Display Input Field
         $html.=
             "<label for='input_{$this->name}'>{$label}:" .
-            $this->getInputHtml($nativeValidationHtml, $placeholderHtml) .
-            "</label>";
+            $this->getInputHtml($nativeValidationHtml, $placeholderHtml);
+            
 
         if ($this->error_message !== "") {
             $html .= $this->getErrorHtml();
         }
+
+        $html .= "</label>";
 
         return $html;
     }
