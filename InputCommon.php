@@ -84,7 +84,9 @@ class InputCommon extends InputCore{
     }
 
     protected function getErrorHtml(){
-        return "<small class='error'>$this->error_message</small>";
+        // old foundation
+        // return "<small class='error'>$this->error_message</small>";
+        return "<span class='form-error'>{$this->error_message}</span>";
     }
 
     protected function getNativeValidation(){
