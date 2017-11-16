@@ -3,7 +3,7 @@ namespace FormBuilder\Validation;
 
 use FormBuilder\InputCore\iInput;
 
-class ValidationType{
+class ValidationType {
     //Constants referring to validation methods to speed up input by taking advantage of IDE code hinting features
     const Required = "isRequired";
     const LettersAndSpaces = "isLettersAndSpaces";

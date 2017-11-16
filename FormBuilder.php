@@ -11,7 +11,9 @@ class FormType{
 }
 
 class FormBuilder {
-
+    /**
+     * @var iInput[]
+     */
     protected $inputs = array();
 
     private
@@ -303,6 +305,3 @@ class FormBuilder {
     }
 
 }
-
-
-

@@ -4,9 +4,16 @@ namespace FormBuilder\InputCore;
 use FormBuilder\Validation\ValidationType;
 use FormBuilder\Validation\Validation;
 
-class InputCommon extends InputCore{
+class InputCommon extends InputCore {
     protected $type;
 
+    /**
+     * @param $label
+     * @param $name
+     * @param ValidationType[] $validations
+     * @param null $placeholder
+     * @param null $defaultValue
+     */
     function __construct($label, $name, $validations = [], $placeholder = null, $defaultValue = null){
         $this->name = $name;
         $this->label = $label;
@@ -78,8 +85,8 @@ class InputCommon extends InputCore{
 
 
     protected function getInputHtml($nativeValidationHtml, $placeholderHtml){
-        $nameHtml = htmlspecialchars( $this->name );
-        $valueHtml = htmlspecialchars( $this->value );
+        $nameHtml = htmlentities( $this->name );
+        $valueHtml = htmlentities( $this->value );
         return
             "<input type='{$this->type}' name='$nameHtml' id='input_{$this->name}'" .
             "{$placeholderHtml}{$nativeValidationHtml} value='$valueHtml' />";

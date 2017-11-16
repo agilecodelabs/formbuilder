@@ -5,7 +5,7 @@ namespace FormBuilder\Testing;
 
 use FormBuilder\FormBuilder;
 
-class FormBuilderTests{ //change to class
+class FormBuilderTests { //change to class
     private $TEST_badToken = null;
     private $formBuilder;
     private $inputs;
